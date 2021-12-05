@@ -1,0 +1,148 @@
+body {
+  background-color: #b0d0ff;
+}
+
+$codeBlock: #f0f0f0;
+$shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+.editor-block {
+  margin: 50px auto;
+  width: 500px;
+  height: 230px;
+  position: relative;
+}
+
+#editor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  margin-top: 18px;
+  outline: none;
+  border: 1px solid black;
+  font-family: 'Exo', sans-serif;
+  box-shadow: $shadow;
+  background-color: #ceddf5;
+}
+
+.toolbar {
+  position: absolute;
+  width: 100%;
+  font-size: 25px;
+  padding: 5px 0 5px 30px;
+  background-color: #3f67a1;
+  border: 1px solid black;
+  font-family: 'Acme', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.preview-block {
+  margin: 100px auto;
+  max-width: 800px;
+  position: relative;
+  padding-bottom: 180vh;
+  overflow-wrap: break-word;
+}
+
+#preview {
+  position: absolute;
+  width: 100%;
+  margin-top: 43px;
+  padding: 0 15px;
+  background-color: #ceddf5;
+  box-shadow: $shadow;
+  border: 1px solid black;
+  font-family: 'Raleway', sans-serif;
+  
+  blockquote {
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  > p > code {
+    padding: 5px;
+  }
+
+  code {
+    background: $codeBlock;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  pre {
+    display: block;
+    overflow: auto;
+    background: $codeBlock;
+    padding: 15px;
+    line-height: 1.5;
+  }
+  
+  span {
+    background: $codeBlock;
+  }
+
+  h1 {
+    border-bottom: 2px solid #22324b;
+  }
+
+  h2 {
+    border-bottom: 1px solid #22324b;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 2px solid #22324b;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
+
+.control-icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.fullsize {
+  min-height: 100vh;
+  margin: 20px auto 80px;
+  padding-bottom: 80vh;
+}
+
+/* width */
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+  background: #506b91; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #001d40; 
+}
